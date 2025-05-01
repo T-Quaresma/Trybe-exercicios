@@ -1,0 +1,23 @@
+body {
+    background-color: rgb(255, 400, 200);
+    font-size: 16px;
+}
+h1 {
+    font-family: sans-serif;
+    color: green;
+    text-align: center;
+}
+#goiabinha {
+    color: cadetblue;
+    font-family: cursive;
+}
+li {
+    line-height: 40px;
+    text-indent: 735px;
+    text-decoration: underline;
+}
+p {
+    font-weight: 600;
+    font-size: 3em;
+    text-align: center;
+}
