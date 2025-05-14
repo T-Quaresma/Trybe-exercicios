@@ -1,0 +1,81 @@
+    .instancia1 {
+        display: block;
+        background-color: rgb(60, 190, 84);
+        border: 2px solid rgb(161, 0, 0);
+        width: 80%;
+        padding: 20px;
+        margin-right: 10px;
+        height: 80%;
+        color: white;
+    }
+
+    .article1 {
+        display: block;
+        background-color: rgb(62, 125, 62);
+        color: black;
+        border: 2px solid rgb(161, 0, 0);
+        margin-top: 10px;
+        padding: 20px;
+        
+    }
+    .article2 {
+        display: block;
+        background-color: rgb(128, 200, 166);
+        color: black;
+        border: 2px solid rgb(161, 0, 0);
+        margin-top: 10px;
+        padding: 20px;
+        
+    }
+    footer {
+        display: block;
+        background-color: black;
+        color: white;  
+
+    }
+    ul {
+        background-color: rgb(235, 200, 84);
+        padding: 10px;
+        list-style-type: none;
+        text-align: center;
+        border: 2px solid rgb(200, 59, 59);;
+    }
+    li {
+        display: inline-block;
+        font-size: 20px;
+        margin: 10px;
+        margin-right: 20px;
+    }
+    a{
+        color: black;
+    }
+    aside {
+        display: block;
+        background-color: pink;
+        width: 20%;
+        padding: 10px;   
+        height: 40%;
+        border: 2px solid rgb(200, 59, 59);
+    }
+    body {
+        background-color: rgb(241, 255, 255);
+        display: block;
+    }
+    .title2 {
+        color: #fff;
+    text-shadow:
+        0 0 1px rgba(0, 0, 0, 0.7),
+        0 0 2px rgba(0, 0, 0, 0.5);
+    }
+    .container {
+        display: flex;
+        width: 100%;
+        gap: 0px
+    }
+    header{
+        display: block;
+        background-color: rgb(60, 190, 84);
+        color: white;
+        padding: 10px;
+        text-align: center;
+    }
