@@ -88,9 +88,7 @@ function rNumber (repet) {
         } else {
             contagems[number] += 1;
         }
-    } 
-     
-    
+    }   
     for (let number in contagems) {
         if (contagems[number] > repNumber) {
             repNumber = contagems[number];
@@ -104,3 +102,18 @@ function rNumber (repet) {
 console.log(rNumber(numbers));
 
 
+console.log('');
+console.log('Exercício 6');
+console.log('');
+
+const valor = 15;
+
+function somaV (soma){
+    let total = 0
+for (index = 0; index < soma.length; index += 1){
+    total = total + index;
+}
+return total;
+}
+
+console.log(somaV(valor));
