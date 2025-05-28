@@ -110,10 +110,35 @@ const valor = 15;
 
 function somaV (soma){
     let total = 0
-for (index = 0; index < soma.length; index += 1){
+for (index = 0; index <= soma; index += 1){
     total = total + index;
 }
 return total;
 }
 
 console.log(somaV(valor));
+
+
+console.log('');
+console.log('Exercício 7');
+console.log('');
+
+let banana = 'banana'
+let refri = 'refri'
+let nomes = 'fernana'
+function final(ending, target){
+    let result = '';
+    if (ending.endsWith(target)){
+        result = true;
+    } else {
+        result = false;
+    }
+    return result;
+}
+console.log('reference (banana)');
+console.log('');
+console.log('refri');
+console.log(final(refri, 'ana'));
+console.log('');
+console.log('fernana');
+console.log(final(nomes, 'ana'));
