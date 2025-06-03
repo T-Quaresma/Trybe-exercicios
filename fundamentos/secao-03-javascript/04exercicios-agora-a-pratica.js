@@ -138,7 +138,7 @@ console.log(orderModifier(order));
 console.log('');
 console.log('Exercício 5');
 console.log('');
-console.log('1');
+console.log('ex1');
 
 const school = {
   lessons: [
@@ -177,7 +177,7 @@ console.log(keyvalue(school, 1));
 
 console.log('');
 
-console.log('2');
+console.log('ex2');
 
 console.log('');
 
@@ -193,7 +193,7 @@ console.log(`The number of students in this school is of ${stuNumbers(school)} s
 
 console.log('');
 
-console.log('2');
+console.log('ex3');
 
 console.log('');
 
@@ -209,3 +209,68 @@ const checkexistence = (object, keyName) => {
 }
 
 console.log(checkexistence(school, 'professor'));
+
+console.log('');
+
+console.log('ex4');
+
+console.log('');
+
+const timeChange = (object) => {
+  object.lessons[0].shift = 'Noite'
+  return object
+}
+
+console.log((timeChange(school)));
+
+console.log('');
+
+console.log('ex5');
+
+console.log('');
+
+const basket = [
+  'Melancia', 'Abacate', 'Melancia', 'Melancia', 'Uva', 'Laranja',
+  'Jaca', 'Pera', 'Melancia', 'Uva', 'Laranja', 'Melancia',
+  'Banana', 'Uva', 'Pera', 'Abacate', 'Laranja', 'Abacate',
+  'Banana', 'Melancia', 'Laranja', 'Laranja', 'Jaca', 'Uva',
+  'Banana', 'Uva', 'Laranja', 'Pera', 'Melancia', 'Uva',
+  'Jaca', 'Banana', 'Pera', 'Abacate', 'Melancia', 'Melancia',
+  'Laranja', 'Pera', 'Banana', 'Jaca', 'Laranja', 'Melancia',
+  'Abacate', 'Abacate', 'Pera', 'Melancia', 'Banana', 'Banana',
+  'Abacate', 'Uva', 'Laranja', 'Banana', 'Abacate', 'Uva',
+  'Uva', 'Abacate', 'Abacate', 'Melancia', 'Uva', 'Jaca',
+  'Uva', 'Banana', 'Abacate', 'Banana', 'Uva', 'Banana',
+  'Laranja', 'Laranja', 'Jaca', 'Jaca', 'Abacate', 'Jaca',
+  'Laranja', 'Melancia', 'Pera', 'Jaca', 'Melancia', 'Uva',
+  'Abacate', 'Jaca', 'Jaca', 'Abacate', 'Uva', 'Laranja',
+  'Pera', 'Melancia', 'Jaca', 'Pera', 'Laranja', 'Jaca',
+  'Pera', 'Melancia', 'Jaca', 'Banana', 'Laranja', 'Jaca',
+  'Banana', 'Pera', 'Abacate', 'Uva',
+];
+
+
+
+const fruitCount = (object) => {
+
+  let counts = {};
+
+  for (index = 0; index < object.length; index += 1) {
+
+    let fruit = object[index];
+    
+    if (counts[fruit] !== undefined) {
+      counts[fruit] = counts[fruit] + 1;
+    } else {
+      counts[fruit] = 1;
+    }  
+
+  }
+  return counts
+}
+
+ console.log(fruitCount(basket));
+ 
+
+
+
