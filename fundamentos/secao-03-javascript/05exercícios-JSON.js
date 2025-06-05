@@ -6,7 +6,7 @@ console.log('');
 
 const fs = require('fs');
 
-fs.readFile('./05animals.json', 'utf8', (err, data) => {
+fs.readFile('./firstJson.json', 'utf8', (err, data) => {
   if (err) {
     console.error('Error loading JSON:', err);
     return;
@@ -23,9 +23,21 @@ const compareTrue = (value1, value2) => {
 }
 
 
-    console.log(compareTrue(animals.girafa, animals.elefante));
+    console.log(compareTrue(animals.set1.girafa, animals.set1.elefante));
+    console.log(compareTrue(animals.set1.elefante, animals.set1.macaco));
+    
 
 });
+
+console.log('');
+
+console.log('ex1');
+
+console.log('');
+
+
+
+
 
 
 

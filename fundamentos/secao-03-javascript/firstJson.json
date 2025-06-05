@@ -1,0 +1,32 @@
+{
+  "set1": {
+    "girafa": true,
+    "elefante": true,
+    "macaco": false
+  },
+  "set2": {
+    "greet1": "go tribe!",
+    "greet2": "vamo que vamo",
+    "greet3": "foguete"
+  },
+  "set3": {
+    "array1": ["Lucas", "Cassiano", "Ferraz", "paolillo"],
+    "array2": ["foguete", "não", "tem", "re"],
+    "array3": ["captain", "my", "captain"]
+  },
+  "set4": {
+    "team1": {
+      "wins": 14,
+      "ties": 8
+    },
+    "team2": {
+      "wins": 1,
+      "ties": 2
+    },
+    "team3": {
+      "wins": 0,
+      "ties": 0
+    }
+    }
+}
+
