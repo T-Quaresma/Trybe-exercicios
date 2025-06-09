@@ -40,7 +40,7 @@ const addProperty = (object, key, value) => {
 
 addProperty(customer, 'email', 'emailtest@gmail.com');
 addProperty(customer, 'fone', '21975634692');
-addProperty(customer, 'useGitHub', 'testgithub.io');
+addProperty(customer, 'userGithub', 'testgithub.io');
 addProperty(customer, 'linkedIn', 'www.testlinkedin.com');
 
 console.log(customer);

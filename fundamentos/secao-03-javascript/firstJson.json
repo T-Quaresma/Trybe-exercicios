@@ -27,6 +27,32 @@
       "wins": 0,
       "ties": 0
     }
+    },
+  "set5": {
+    "array1": [9, 1, 2, 3, 9, 5, 7],
+    "array2": [0, 4, 4, 4, 9, 2, 1],
+    "array3": [0, 0, 0]
+  },
+  "set6": {
+    "triangle": {
+      "base": 10,
+      "height": 50
+    },
+    "rectangle": {
+      "base": 10,
+      "height": 50
     }
+  },
+  "set7":  null,
+  "set8": {
+    "array": [2, 15, 7, 9, 45]
+  },
+  "set9": {
+    "param1": "Hi there!",
+    "param2": "Hello",
+    "param3": "How are you today",
+    "param4": "this is an encoding test",
+    "param5": "go trybe"
+  }
 }
 

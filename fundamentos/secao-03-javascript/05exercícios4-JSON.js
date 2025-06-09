@@ -18,6 +18,6 @@ function footballPoints (wins, ties) {
 console.log(footballPoints(firstJson.set4.team1.wins, firstJson.set4.team1.ties));
 console.log(footballPoints(firstJson.set4.team2.wins, firstJson.set4.team2.ties));
 console.log(footballPoints(firstJson.set4.team3.wins, firstJson.set4.team3.ties));
-
-
 })
+
+
