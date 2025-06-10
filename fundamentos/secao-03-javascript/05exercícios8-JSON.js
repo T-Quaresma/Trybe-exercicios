@@ -2,7 +2,7 @@ const fs = require("fs");
 
 fs.readFile("./firstJson.json", "utf8", (err, data) => {
     if (err) {
-        console.error("Error loading JSON", data);
+        console.error("Error loading JSON", err);
         return
     }
     const firstJson = JSON.parse(data);
