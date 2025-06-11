@@ -1,0 +1,34 @@
+[
+  {
+    "nome": "Leite Integral",
+    "disponivel": true,
+    "quantidade": 30,
+    "promocao": false,
+    "alergias": ["lactose"],
+    "vitaminas": ["A", "D"]
+  },
+  {
+    "nome": "Farinha de Trigo",
+    "disponivel": true,
+    "quantidade": 20,
+    "promocao": true,
+    "alergias": ["glúten"],
+    "vitaminas": []
+  },
+  {
+    "nome": "Refrigerante Cola",
+    "disponivel": false,
+    "quantidade": 0,
+    "promocao": false,
+    "alergias": [],
+    "vitaminas": []
+  },
+  {
+    "nome": "Suco de Laranja Natural",
+    "disponivel": true,
+    "quantidade": 12,
+    "promocao": true,
+    "alergias": [],
+    "vitaminas": ["C"]
+  }
+]
