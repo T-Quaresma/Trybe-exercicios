@@ -76,6 +76,10 @@
       "lineB": 2,
       "lineC": 10
     }
+  },
+  "set13": {
+    "string1": "1 cerveja",
+    "string2": "1 cachaça, 5 cervejas, 1 copo de vinho"
   }
 }
 
