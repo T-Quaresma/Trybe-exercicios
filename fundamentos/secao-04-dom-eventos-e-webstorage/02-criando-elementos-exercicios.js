@@ -37,3 +37,6 @@ let terceiroFilho = pai.nextElementSibling;
 console.log(terceiroFilho);
 
 
+// removendo elementos do html
+
+parent.removeChild(irmao)
