@@ -45,8 +45,9 @@ const feriados = document.getElementsByClassName('holiday');
 for(index = 0; index < feriados.length; index += 1) {
 feriados[index].addEventListener('click', changeBgColor);
 }
-// ex 3
 
+
+// ex 3
 
 
 const changeText = () => {
@@ -64,3 +65,133 @@ const fridayText = document.getElementsByClassName('friday');
 for(index = 0; index < fridayText.length; index += 1) {
 fridayText[index].addEventListener('click', changeText);
 }
+
+// ex 4
+
+const zoom = (event) => {
+    const zoomDayTarget = event.target;
+    if(zoomDayTarget.style.fontSize !== '30px') {
+        zoomDayTarget.style.fontSize = '30px';
+    } else {
+        zoomDayTarget.style.fontSize = '';
+    }
+}
+
+const zoomText = document.getElementsByClassName('day');
+for(index = 0; index < zoomText.length; index += 1) {
+    zoomText[index].addEventListener('mouseover', zoom);
+    zoomText[index].addEventListener('mouseout', zoom);
+}
+
+// ex 5 
+
+const divMain = document.createElement('div');
+divMain.className = 'my-tasks';
+document.body.appendChild(divMain);
+
+const span = document.createElement('span');
+span.innerText = 'Selection';
+divMain.appendChild(span);
+
+const divCor = document.createElement('div');
+divCor.className = 'task-color';
+divMain.appendChild(divCor);
+
+const actionSelection = (event) => {
+    const taskSelection = event.target;   
+    taskSelection.classList.toggle('selected');  
+    const taskselctionOn = document.querySelector('.task-color.selected');
+    if(taskselctionOn) {
+        taskselctionOn.style.backgroundColor = 'green';
+    } else {
+        taskSelection.style.backgroundColor = '';
+    }
+}
+
+divCor.addEventListener('click', actionSelection);
+
+// ex 6
+
+const actionColor = (event) => {
+    const taskColor = document.querySelector('.task-color.selected');
+    if(taskColor) {
+        if(event.target.style.backgroundColor !== "green") {
+            event.target.style.backgroundColor = 'green';
+        }else {
+            event.target.style.backgroundColor = '';
+        }
+    }
+}
+
+const taskColor = document.getElementsByClassName('day');
+for (let index = 0; index < taskColor.length; index += 1) {
+  taskColor[index].addEventListener('click', actionColor);
+}
+
+// ex 7 
+
+const container = document.createElement('div');
+document.body.appendChild(container);
+
+const caixaDeTexto = document.createElement('input');
+caixaDeTexto.type = 'text';
+caixaDeTexto.placeholder = 'Escreva seu compromisso aqui';
+caixaDeTexto.id = 'task-input';
+container.appendChild(caixaDeTexto);
+
+const cdtButton = document.createElement('button');
+cdtButton.id = 'btn-add';
+cdtButton.innerText = 'Adicionar'
+container.appendChild(cdtButton);
+
+const inputText = () => {
+    const inpText = document.getElementById('task-input').value;
+    if(inpText !== "") {
+        const newText = document.createElement('li');
+        newText.innerText = inpText;
+        decemberMonth.appendChild(newText);
+        document.getElementById('task-input');value = '';
+    }
+}
+
+cdtButton.addEventListener('click', inputText);
+
+caixaDeTexto.addEventListener('keyup', (event) => {
+    if( event.key === "Enter") {
+        inputText();
+    }
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
