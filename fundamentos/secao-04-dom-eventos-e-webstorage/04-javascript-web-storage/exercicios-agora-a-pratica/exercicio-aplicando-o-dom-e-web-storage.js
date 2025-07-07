@@ -37,6 +37,8 @@ window.onload = () => {
   for (let index = 0; index < backgroundColorButtons.length; index += 1) {
     backgroundColorButtons[index].addEventListener("click", (event) => {
       setBackgroundColor(event.target.innerHTML)
+      localStorage.setItem('backgroundColorUser', event.target.innerHTML);
+      
     })
   }
 
@@ -45,6 +47,8 @@ window.onload = () => {
   for (let index = 0; index < fontColorButtons.length; index += 1) {
     fontColorButtons[index].addEventListener("click", (event) => {
       setFontColor(event.target.innerHTML)
+      localStorage.setItem('textColorUser', event.target.innerHTML);
+            
     })
   }
 
@@ -53,6 +57,8 @@ window.onload = () => {
   for (let index = 0; index < fontSizeButtons.length; index += 1) {
     fontSizeButtons[index].addEventListener("click", (event) => {
       setFontSize(event.target.innerHTML)
+      localStorage.setItem('fontSizeUser', event.target.innerHTML);
+      
     })
   }
 
@@ -61,6 +67,8 @@ window.onload = () => {
   for (let index = 0; index < lineHeightButtons.length; index += 1) {
     lineHeightButtons[index].addEventListener("click", (event) => {
       setLineHeight(event.target.innerHTML)
+      localStorage.setItem('lineHeightUser', event.target.innerHTML);
+      
     })
   }
 
@@ -69,6 +77,37 @@ window.onload = () => {
   for (let index = 0; index < fontFamilyButtons.length; index += 1) {
     fontFamilyButtons[index].addEventListener("click", (event) => {
       setFontFamily(event.target.innerHTML)
+      localStorage.setItem('fontFamilyUser', event.target.innerHTML);
+      
     })
   }
+  let recoveryLocalStorageBackgroundSettings = localStorage.getItem('backgroundColorUser');
+    if(recoveryLocalStorageBackgroundSettings) {
+      setBackgroundColor(recoveryLocalStorageBackgroundSettings);
+    }
+      
+
+  let recoveryLocalStorageColorSettings = localStorage.getItem('textColorUser');
+    if(recoveryLocalStorageColorSettings){
+      setFontColor(recoveryLocalStorageColorSettings);
+    }
+  
+  let recoveryLocalStorageFontSizeSettings = localStorage.getItem('fontSizeUser');
+    if(recoveryLocalStorageFontSizeSettings){
+      setFontSize(recoveryLocalStorageFontSizeSettings);
+    }
+      
+  let recoveryLocalStorageLineHeightSettings = localStorage.getItem('lineHeightUser');
+    if(recoveryLocalStorageLineHeightSettings) {
+      setLineHeight(recoveryLocalStorageLineHeightSettings);
+    }
+       
+  
+  let recoveryLocalStorageFontFamilySettings = localStorage.getItem('fontFamilyUser');
+    if(recoveryLocalStorageFontFamilySettings) {
+      setFontFamily(recoveryLocalStorageFontFamilySettings)
+    }
+      
 }
+
+
