@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 #title {
     text-align: center;
 }
@@ -45,13 +49,27 @@
 #pixel-board {
    display: grid;
    grid-template-columns: repeat(5, 40px);
-   grid-template-rows: repeat(5, 40px); 
    justify-content: center;
+   gap: 0px;
 }
 
 .pixel {
-    height: 40px;
-    width: 40px;
     background-color: white;
-    border: 1px solid black;
+    outline: 1px solid black;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#clear-board {
+    display: block;
+    margin: 10px auto;
+}
+
+#input-container {
+    display: flex;
+    justify-content: center;
+    gap: 1px;
+    margin-bottom: 10px;
 }

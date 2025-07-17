@@ -60,3 +60,125 @@ const selectColor = (event) => {
 for(index = 0; index < colors.length; index += 1){
 colors[index].addEventListener('click', selectColor)
 }
+
+// adicionando o butão para que gere o valor adicionado no input + recriando o evento de pintar os pixels nos novos pixels criados + salvar no localStorage
+
+const newSquareSize = () => {
+    const inputValue = document.getElementById('board-size').value;
+    if(inputValue >= 5 && inputValue <= 50){
+        if(inputValue >= 20) {
+            const size = Number(inputValue);
+            const totalPixels = size * size;
+            const pixelSize = "18px" 
+            const pixelBoard = document.getElementById('pixel-board');
+            pixelBoard.innerHTML = '';
+            pixelBoard.style.gridTemplateColumns = `repeat(${size}, ${pixelSize})`;
+            for(let index = 0; index < totalPixels; index += 1) {
+                const pixel = document.createElement('div');
+                pixel.className = 'pixel';
+                pixel.style.height = '18px';
+                pixel.style.width = '18px'
+                pixelBoard.appendChild(pixel);    
+            }
+            //ao criar os pixels (divs) ativar a função de pintar os pixels que forem clicados
+            adicinarEventosNosPixels()
+        } else {
+            const size = Number(inputValue);
+            const totalPixels = size * size;
+            const pixelSize = "40px"
+            const pixelBoard = document.getElementById('pixel-board');
+            pixelBoard.innerHTML = '';
+            pixelBoard.style.gridTemplateColumns = `repeat(${size}, ${pixelSize})`;
+            for(let index = 0; index < totalPixels; index += 1) {
+                const pixel = document.createElement('div');
+                pixel.className = 'pixel';
+                pixel.style.height = '40px';
+                pixel.style.width = '40px'
+                pixelBoard.appendChild(pixel);   
+            }
+            //ao criar os pixels (divs) ativar a função de pintar os pixels que forem clicados
+            adicinarEventosNosPixels()
+        }
+    } else {
+        alert('Somente valores de 5 a 50')
+    }
+    localStorage.setItem('boardSize', JSON.stringify(inputValue))
+}
+
+const boardSizeButton = document.querySelector('#generate-board')
+boardSizeButton.addEventListener('click', newSquareSize)
+
+// pegando os valores do localStorage e aplicando na criação da caixa de pixels
+
+const readSavedPixels = JSON.parse(localStorage.getItem("boardSize"));
+if(readSavedPixels) {
+    const pixelSize = readSavedPixels >= 20 ? 18 : 40;
+    const totalPixels = readSavedPixels * readSavedPixels;
+    const pixelBoard = document.querySelector('#pixel-board');
+    pixelBoard.innerHTML = '';
+    pixelBoard.style.gridTemplateColumns = `repeat(${readSavedPixels}, ${pixelSize}px)`;
+    for(let index = 0; index < totalPixels; index += 1) {
+        const pixel = document.createElement('div')
+        pixel.className = 'pixel';
+        pixel.style.height = `${pixelSize}px`;
+        pixel.style.width = `${pixelSize}px`;
+        pixelBoard.appendChild(pixel);
+    }
+}
+
+const adicinarEventosNosPixels = () => {
+   const pixelSelection = document.querySelectorAll('.pixel');
+    for(index = 0; index < pixelSelection.length; index += 1) {
+        pixelSelection[index].addEventListener('click', pixelColoring);
+    } 
+}
+
+// criar uma função que preencha um pixel com a cor selecionada.
+
+const pixelColoring = (event) => {
+    const colorSelected = document.querySelector('.selected');
+    const bgColor = getComputedStyle(colorSelected).backgroundColor;
+    let storedColors = [];
+    if(colorSelected.classList.contains('selected')) {
+        event.target.style.backgroundColor = bgColor   
+    } 
+    const allPixels = document.querySelectorAll(".pixel");
+    for(index = 0; index < allPixels.length; index += 1) {
+        storedColors.push(allPixels[index].style.backgroundColor)
+    }
+    localStorage.setItem('pixelBoard', JSON.stringify(storedColors));      
+}
+
+const pixelSelection = document.querySelectorAll('.pixel');
+
+for(index = 0; index < pixelSelection.length; index += 1) {
+    pixelSelection[index].addEventListener('click', pixelColoring);
+}
+
+// criar butão para limpar a janela de pixels
+
+const clearPixelButton = document.querySelector('#clear-board');
+
+const clearBoard = () => {
+    let board = document.querySelectorAll('.pixel');
+    let resetColor = '#ffffffff'
+    let newColors = []
+    for(index = 0; index < board.length; index += 1) {
+        board[index].style.backgroundColor = resetColor
+        newColors.push(resetColor);
+    }
+    localStorage.setItem('pixelBoard', JSON.stringify(newColors))
+}
+
+clearPixelButton.addEventListener('click', clearBoard);
+
+// adicionar combinação de cores nos pixels atuais no localStorage
+pixelColorSelection = document.querySelectorAll('.pixel')
+
+const readSavedColors = JSON.parse(localStorage.getItem("pixelBoard"));
+for(index = 0; index < pixelColorSelection.length; index += 1) {
+    pixelColorSelection[index].style.backgroundColor = readSavedColors[index]
+}
+
+
+
