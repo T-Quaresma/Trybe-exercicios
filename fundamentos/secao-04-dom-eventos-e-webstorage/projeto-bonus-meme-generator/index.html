@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Meme Generator</h1>
+    </header>
+    <div>
+        <h2>Texto:</h2>
+        <input id="text-input" type="text" accept="image/*" placeholder="Digite seu texto">  
+    </div>
+    <div>
+        <h2>Foto:</h2>
+        <button id="file-selection">Choose File</button>
+        <input type="file" id="img-input" accept="image/*" style="display: none;" src="" alt="imagem-selecionada">
+    </div>
+    <section>
+        <div id="meme-image-container">
+            <p id="meme-text"></p>
+            <img id="meme-insert" src="" alt="imagem de referencia" style="display: none;">
+        </div>    
+    </section>
+    <div>
+        <h2>Estilos customizados:</h2>
+        <button id="fire">Fire</button>
+        <button id="water">Water</button>
+        <button id="earth">earth</button>
+    </div>
+</body>
+</html>

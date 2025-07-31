@@ -1,0 +1,23 @@
+header {    
+    text-align: center;
+}
+
+#button-adding-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.list {
+    cursor: pointer;
+    background-color: white;
+}
+
+.selected {
+  cursor: pointer;
+}
+
+.crossed {
+  cursor: pointer;
+  text-decoration: line-through;
+}
